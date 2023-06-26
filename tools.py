@@ -90,7 +90,7 @@ def random_values_generator(template: Dict [str, Union[str, int, float]]) -> Non
         if value[0] == "float":
             document.update({key : random.uniform(value[1], value[2])})
         if value[0] == "time":
-            document.update({key : value[1] + (value[2] - value[1]) * random.random()})
+            document.update({key : round(value[1] + (value[2] - value[1]) * random.random(),0)})
     return document
 
             
